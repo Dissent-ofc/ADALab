@@ -38,13 +38,6 @@ void bubbleSort(int arr[], int n)
     }
 }
 
-void printArray(int arr[], int size)
-{
-    int i;
-    for (i = 0; i < size; i++)
-        printf("%d ", arr[i]);
-}
-
 int main()
 {
     int n, arr[100];
@@ -63,7 +56,8 @@ int main()
     gettimeofday(&tv2, NULL);
 
     printf("Sorted array: \n");
-    printArray(arr, n);
+    for (int i = 0; i < n; i++)
+        printf("%d ", arr[i]);
     printf("\n");
 
     printf("Time of bubble sort = %f microseconds\n",(double)(tv2.tv_usec - tv1.tv_usec));
