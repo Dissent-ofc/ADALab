@@ -40,23 +40,23 @@ void bubbleSort(int arr[], int n)
 
 int main()
 {
-    int n, arr[100];
+    int size, arr[100];
     struct timeval tv1, tv2;
     struct rusage r_usage;
 
     printf("Enter array size: ");
-    scanf("%d", &n);
+    scanf("%d", &size);
 
     printf("Enter array elements: ");
-    for (int i = 0; i < n; i++)
+    for (int i = 0; i < size; i++)
         scanf("%d", &arr[i]);
 
     gettimeofday(&tv1, NULL);
-    bubbleSort(arr, n);
+    bubbleSort(arr, size);
     gettimeofday(&tv2, NULL);
 
     printf("Sorted array: \n");
-    for (int i = 0; i < n; i++)
+    for (int i = 0; i < size; i++)
         printf("%d ", arr[i]);
     printf("\n");
 
