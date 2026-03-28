@@ -1,22 +1,20 @@
-
 #include<stdio.h>          // Standard input-output functions
 #include<sys/time.h>       // For time measurement
 #include<time.h>           // Time-related functions
 #include<sys/resource.h>   // For memory usage information
 
 // Global declarations
-int a[20][20];             // Adjacency matrix for the graph
+int arr[20][20];             // Adjacency matrix for the graph
 int q[20];                 // Queue for BFS
 int visited[20];           // To track visited vertices
 int n,i,j;                 // Variables for vertices and loops
 int f=0,r=-1;              // Front and rear of the queue
 
-// Function to perform Breadth First Search
-void bfs(int v) {
-    // Check all adjacent vertices of v
+void bfs(int v) 
+{
 	for (i=1;i<=n;i++)
     {
-        if(a[v][i] && !visited[i])   // If edge exists and vertex not visited
+        if(arr[v][i] && !visited[i])   // If edge exists and vertex not visited
         q[++r]=i;                  // Insert vertex into queue
     }
     // Process next vertex in queue
@@ -48,7 +46,7 @@ void main() {
     {
         for (j=1;j<=n;j++)
         {
-            scanf("%d",&a[i][j]);
+            scanf("%d",&arr[i][j]);
         }
     }
 
@@ -76,4 +74,3 @@ void main() {
     getrusage(RUSAGE_SELF,&r_usage);
     printf("Memory usage:%ld kilobytes",r_usage.ru_maxrss);  
 }
-
