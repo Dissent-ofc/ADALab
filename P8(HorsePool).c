@@ -7,8 +7,8 @@
 char str[100], ptn[20];
 int res, m, n, i, j, k, table[1000];
 
-void shift(char p[]);
-int horspool(char p[], char t[]);
+void shift(char ptn[]);
+int horspool(char ptn[], char text[]);
 
 void main()
 {
@@ -35,35 +35,34 @@ void main()
     printf("Memory usage = %ld kilobytes\n", r_usage.ru_maxrss);
 }
 
-void shift(char p[])
+void shift(char ptn[])
 {
-	int len;
-    len = strlen(p);
+	int len = strlen(ptn);
     for (i = 0; i < 1000; i++)
 		table[i] = len;
 
 	for (j = 0; j <= len - 2; j++)
-		table[p[j]] = len - 1 - j;
+		table[ptn[j]] = len - 1 - j;
 }
 
-int horspool(char p[], char t[])
+int horspool(char ptn[], char str[])
 {
-	shift(p);
+	shift(ptn);
 
-	m = strlen(p);
-	n = strlen(t);
+	m = strlen(ptn);
+	n = strlen(str);
 	i = m - 1;
 
 	while (i <= n - 1) {
 		k = 0;
 
-		while ((k <= m - 1) && (p[m - 1 - k] == t[i - k]))
+		while ((k <= m - 1) && (ptn[m - 1 - k] == str[i - k]))
 			k++;
 
 		if (k == m)
 			return (i - m + 1);
 		else
-			i = i + table[t[i]];
+			i = i + table[str[i]];
 	}
     return -1;
 }
