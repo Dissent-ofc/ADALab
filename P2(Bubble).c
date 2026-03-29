@@ -11,18 +11,13 @@ void swap(int* x, int* y)
     *y = temp;
 }
 
-void bubbleSort(int arr[], int n)
+void bubbleSort(int arr[], int size)
 {
-    int i, j;
-    bool swapped;  // To check if any swapping happened in a pass
-
-    // Loop for each pass
-    for (i = 0; i < n - 1; i++)
+    bool swapped;
+    for (int i = 0; i < size - 1; i++)
     {
         swapped = false;
-
-        // Compare adjacent elements
-        for (j = 0; j < n - i - 1; j++)
+        for (int j = 0; j < size - i - 1; j++)
         {
             // If current element is greater than next element swap them
             if (arr[j] > arr[j + 1])
