@@ -7,8 +7,7 @@ void siftDown(int arr[], int root, int bottom);
 
 int main()
 {
-    int arr[100];
-    int size, i;
+    int arr[100], size, i;
     struct timeval tv1, tv2;
     struct rusage r_usage;
 
