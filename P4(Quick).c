@@ -39,6 +39,7 @@ void quicksort(int arr[], int low, int high)
         quicksort(arr, pi + 1, high);
     }
 }
+
 int main()
 {
     struct timeval tv1, tv2;
