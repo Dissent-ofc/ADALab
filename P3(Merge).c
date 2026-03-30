@@ -75,3 +75,9 @@ int main()
 
 	return 0;
 }
+
+//Output:
+//Enter number of elements: 10
+//Enter 10 elements: 38 27 43 3 9 82 10 5 1 7
+//Sorted array: 1 3 5 7 9 10 27 38 43 82
+//time of merge sort = 0.000000 microseconds

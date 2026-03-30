@@ -60,3 +60,20 @@ void main()
     else
         printf("\nGraph is not connected\n");
 }
+
+//Output:
+//Enter number of vertices:5
+//Enter the adjacency matrix:
+//0 1 1 0 0
+//1 0 1 1 0
+//1 1 0 0 1
+//0 1 0 0 1
+//0 0 1 1 0
+//Enter the source vertex:1
+// 1->2
+// 2->3
+// 2->4
+// 3->5
+//Time of DFS=123.000000 microseconds
+//Memory usage:12345 kilobytes
+//Graph is connected

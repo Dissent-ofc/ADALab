@@ -77,3 +77,9 @@ void siftDown(int arr[], int root, int bottom)
         }
     }
 }
+
+//Output:
+//Enter the number of elements: 10
+//Enter the elements: 5 2 9 1 5 6 7 3 4 8
+//Sorted elements are: 1 2 3 4 5 5 6 7 8 9
+//Time of HeapSort=123.000000 microseconds
