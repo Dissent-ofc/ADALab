@@ -66,3 +66,10 @@ int horspool(char ptn[], char str[])
 	}
     return -1;
 }
+
+//Output:
+//Enter the text:hello world
+//Enter the pattern to be found:world
+//Pattern found at 7 position
+//Time of Horsepool= 0.000000 microseconds
+//Memory usage = 0 kilobytes
