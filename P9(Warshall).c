@@ -13,7 +13,7 @@ void warshall(int a[][20], int n)
                 a[i][j] = (a[i][j] || a[i][k] && a[k][j]);
 }
 
-int main()
+void main()
 {
     int n, a[20][20], i, j;
     struct timeval tv1, tv2;
@@ -41,8 +41,6 @@ int main()
     printf("Time of Warshall = %f microseconds\n",(double)(tv2.tv_usec - tv1.tv_usec));
     getrusage(RUSAGE_SELF, &r_usage);
     printf("Memory usage: %ld kilobytes\n", r_usage.ru_maxrss);
-    
-    return 0;
 }
 
 //Output:
